@@ -27,6 +27,7 @@ Patch0:		nagios-snmp-plugins-1.0-gcc4.diff
 Patch1:		nagios-snmp-plugins-format-report.patch
 Requires:	nagios
 BuildRequires:	net-snmp-devel
+BuildRequires:	openssl-devel
 BuildRequires:	autoconf2.5
 BuildRequires:	automake1.7
 BuildRoot:	%{_tmppath}/%{name}-buildroot
