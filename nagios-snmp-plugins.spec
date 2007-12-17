@@ -30,7 +30,6 @@ BuildRequires:	net-snmp-devel
 BuildRequires:	openssl-devel
 BuildRequires:	autoconf2.5
 BuildRequires:	automake1.7
-BuildRoot:	%{_tmppath}/%{name}-buildroot
 
 %description
 These plugins allow you to monitor disk space and running processes on a remote
