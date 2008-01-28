@@ -1,12 +1,12 @@
 Summary:	Plugins for Nagios to monitor remote disk and processes via SNMP
 Name:		nagios-snmp-plugins
-Version:	1.1
-Release:	%mkrel 4
+Version:	1.1.1
+Release:	%mkrel 1
 License:	GPL
 Group:		Networking/Other
 URL:		http://nagios.manubulon.com/
 Source0:	http://nagios.manubulon.com/%{name}.%{version}.tgz
-Source1:	ftp://ftp.hometree.net/pub/nagios-snmp-plugins/nagios-snmp-plugins-1.1.tar.gz
+Source1:	ftp://ftp.hometree.net/pub/nagios-snmp-plugins/nagios-snmp-plugins-1.2.tar.gz
 Source2:	check_snmp_disk.cfg
 Source3:	check_snmp_proc.cfg
 Source4:	check_snmp_boostedge.cfg
@@ -200,7 +200,7 @@ perl -pi -e "s|^use lib \"/usr/local/nagios/libexec\"|use lib \"%{_libdir}/nagio
 
 %build
 
-pushd nagios-snmp-plugins-1.1
+pushd nagios-snmp-plugins-1.2
 #export WANT_AUTOCONF_2_5="1"
 #libtoolize --copy --force; aclocal-1.7; autoheader; automake-1.7 --copy --add-missing; autoconf
 
@@ -219,14 +219,14 @@ rm -rf %{buildroot}
 install -d %{buildroot}%{_sysconfdir}/nagios/plugins.d
 install -d %{buildroot}%{_libdir}/nagios/plugins
 
-pushd nagios-snmp-plugins-1.1
+pushd nagios-snmp-plugins-1.2
     install -m0755 check_snmp_disk %{buildroot}%{_libdir}/nagios/plugins/
     install -m0755 check_snmp_proc %{buildroot}%{_libdir}/nagios/plugins/
 popd
 
-cp nagios-snmp-plugins-1.1/README README.nagios-snmp-plugins-1.1
-cp nagios-snmp-plugins-1.1/AUTHORS AUTHORS.nagios-snmp-plugins-1.1
-cp nagios-snmp-plugins-1.1/NEWS NEWS.nagios-snmp-plugins-1.1
+cp nagios-snmp-plugins-1.2/README README.nagios-snmp-plugins-1.2
+cp nagios-snmp-plugins-1.2/AUTHORS AUTHORS.nagios-snmp-plugins-1.2
+cp nagios-snmp-plugins-1.2/NEWS NEWS.nagios-snmp-plugins-1.2
 
 # binaries
 install -m0644 plugins.d/check_snmp_disk.cfg %{buildroot}%{_sysconfdir}/nagios/plugins.d/check_snmp_disk.cfg
@@ -384,7 +384,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
-%doc Changelog LICENSE README* AUTHORS* NEWS*
+%doc Changelog LICENSE README* AUTHORS* NEWS* doc/*
 
 %files -n nagios-check_snmp_disk
 %defattr(-,root,root)
