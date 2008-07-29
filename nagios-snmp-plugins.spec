@@ -1,7 +1,7 @@
 Summary:	Plugins for Nagios to monitor remote disk and processes via SNMP
 Name:		nagios-snmp-plugins
 Version:	1.1.1
-Release:	%mkrel 1
+Release:	%mkrel 3
 License:	GPL
 Group:		Networking/Other
 URL:		http://nagios.manubulon.com/
