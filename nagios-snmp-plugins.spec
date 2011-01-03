@@ -1,7 +1,7 @@
 Summary:	Plugins for Nagios to monitor remote disk and processes via SNMP
 Name:		nagios-snmp-plugins
 Version:	1.1.1
-Release:	%mkrel 6
+Release:	%mkrel 7
 License:	GPL
 Group:		Networking/Other
 URL:		http://nagios.manubulon.com/
@@ -29,7 +29,7 @@ Requires:	nagios
 BuildRequires:	net-snmp-devel
 BuildRequires:	openssl-devel
 BuildRequires:	autoconf2.5
-BuildRequires:	automake1.7
+BuildRequires:	automake
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 
 %description
@@ -202,7 +202,7 @@ perl -pi -e "s|^use lib \"/usr/local/nagios/libexec\"|use lib \"%{_libdir}/nagio
 
 pushd nagios-snmp-plugins-1.2
 #export WANT_AUTOCONF_2_5="1"
-#libtoolize --copy --force; aclocal-1.7; autoheader; automake-1.7 --copy --add-missing; autoconf
+#libtoolize --copy --force; aclocal; autoheader; automake --copy --add-missing; autoconf
 
 sh ./build.sh
 
