@@ -1,0 +1,24 @@
+Index: snmp_common.c
+===================================================================
+--- snmp_common.c
++++ snmp_common.c	2006-08-03 00:56:32.000000000 +0200
+@@ -229,7 +229,8 @@
+ 
+ void integer_callback(struct variable_list *vars, void **pnt)
+ {
+-  long *data = ((long *)(*pnt))++;
++  //long *data = ((long *)(*pnt))++;
++  (*pnt) = (long *) (*pnt)+1; long *data =  (long *)(*pnt);
+ 
+   if(verbose)
+     printf("%s: Found Integer Value %ld into %lx\n", bn, *vars->val.integer, data);
+@@ -245,7 +246,8 @@
+ 
+ void string_callback(struct variable_list *vars, void **pnt)
+ {
+-  char **data = ((char **)(*pnt))++;
++  //char **data = ((char **)(*pnt))++;
++  (*pnt) = (char**) (*pnt)+1; char** data =  (char**)(*pnt);
+   
+   if(verbose)
+     printf("%s: Putting String into %lx\n", bn, data);
