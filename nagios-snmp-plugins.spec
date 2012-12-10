@@ -466,3 +466,67 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %attr(0644,root,root) %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/nagios/plugins.d/check_snmp_vrrp.cfg
 %{_libdir}/nagios/plugins/check_snmp_vrrp.pl
+
+
+%changelog
+* Mon Jan 03 2011 Oden Eriksson <oeriksson@mandriva.com> 1.1.1-7mdv2011.0
++ Revision: 627810
+- don't force the usage of automake1.7
+
+* Tue Oct 12 2010 Funda Wang <fwang@mandriva.org> 1.1.1-6mdv2011.0
++ Revision: 585068
+- rebuild
+
+* Thu Oct 15 2009 Oden Eriksson <oeriksson@mandriva.com> 1.1.1-5mdv2010.0
++ Revision: 457693
+- rebuild
+
+* Fri Sep 04 2009 Thierry Vignaud <tv@mandriva.org> 1.1.1-4mdv2010.0
++ Revision: 430149
+- rebuild
+
+* Tue Jul 29 2008 Thierry Vignaud <tv@mandriva.org> 1.1.1-3mdv2009.0
++ Revision: 253549
+- rebuild
+
+* Mon Jan 28 2008 Oden Eriksson <oeriksson@mandriva.com> 1.1.1-1mdv2008.1
++ Revision: 159004
+- nagios-snmp-plugins.1.1.1 (perl code)
+- nagios-snmp-plugins-1.2 (c code)
+
+* Mon Jan 14 2008 Oden Eriksson <oeriksson@mandriva.com> 1.1-4mdv2008.1
++ Revision: 151740
+- release bump
+- splitmania!
+- added some svn props
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+
+* Tue Aug 28 2007 Oden Eriksson <oeriksson@mandriva.com> 1.1-3mdv2008.0
++ Revision: 72472
+- nagios-snmp-plugins-1.1
+
+* Wed Aug 08 2007 Oden Eriksson <oeriksson@mandriva.com> 1.1-2mdv2008.0
++ Revision: 60205
+- rebuilt against new net-snmp libs
+
+* Tue Apr 17 2007 Oden Eriksson <oeriksson@mandriva.com> 1.1-1mdv2008.0
++ Revision: 13825
+- fix deps
+- use the new /etc/nagios/plugins.d scandir
+
+
+* Thu Aug 03 2006 Oden Eriksson <oeriksson@mandrakesoft.com> 1.0-3mdv2007.0
+- added a gcc4 patch by misc (P0)
+
+* Sun Apr 03 2005 Oden Eriksson <oeriksson@mandrakesoft.com> 1.0-2mdk
+- use the %%mkrel macro
+
+* Sun May 30 2004 Oden Eriksson <oeriksson@mandrakesoft.com> 1.0-1mdk
+- initial cooker contrib
+- used parts of the provided spec file
+
