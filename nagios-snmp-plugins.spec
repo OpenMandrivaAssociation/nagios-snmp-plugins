@@ -4,7 +4,7 @@ Version:	1.1.1
 Release:	8
 License:	GPL
 Group:		Networking/Other
-URL:		http://nagios.manubulon.com/
+URL:		https://nagios.manubulon.com/
 Source0:	http://nagios.manubulon.com/%{name}.%{version}.tgz
 Source1:	ftp://ftp.hometree.net/pub/nagios-snmp-plugins/nagios-snmp-plugins-1.2.tar.gz
 Source2:	check_snmp_disk.cfg
