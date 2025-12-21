@@ -26,6 +26,8 @@ Source17:	check_snmp_win.cfg
 Patch0:		nagios-snmp-plugins-1.0-gcc4.diff
 Patch1:		nagios-snmp-plugins-format-report.patch
 Requires:	nagios
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
 BuildRequires:	net-snmp-devel
 BuildRequires:	openssl-devel
 BuildRequires:	autoconf2.5
